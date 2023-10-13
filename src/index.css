@@ -8,4 +8,18 @@
   -webkit-text-fill-color: transparent;
 }
 
+.bg--image {
+  background-image: url(./assets/placsbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.badge-gradient {
+  background: var(
+    --gradient-border-outline,
+    linear-gradient(96deg, #0076ce 0%, #9400d3 100%)
+  );
+}
+
 @tailwind utilities;
