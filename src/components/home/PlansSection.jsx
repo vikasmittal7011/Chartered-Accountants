@@ -13,7 +13,7 @@ const PlansSection = () => {
         </p>
       </div>
 
-      <div className="lg:ml-40 flex flex-col sm:flex-row gap-5 flex-wrap xs:mx-5">
+      <div className="md:ml-6 xs:ml-3 ml-12 flex flex-col sm:flex-row gap-28 flex-wrap xs:mx-5">
         {plans.map((plan, i) => {
           return (
             <div
@@ -53,7 +53,7 @@ const PlansSection = () => {
           );
         })}
       </div>
-      <p className="pb-20 xs:px-5 mt-5 lg:ps-40 lg:pe-28 ">
+      <p className="pb-20 mt-5 px-7  ">
         * For forms AOC-4 and MGT-7, you will be charged a penalty of ₹200
         <span className="font-bold"> every day</span> until you file the form .
         There is no maximum penalty amount. So, if you dont file the form for a

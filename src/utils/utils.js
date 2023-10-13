@@ -1,3 +1,5 @@
+import { academy, connect, research, search } from "../assets/index";
+
 export const navigation = [
   {
     name: "Solulions",
@@ -181,5 +183,55 @@ export const plans = [
       no: "6",
       letter: "st",
     },
+  },
+];
+
+export const detailsPageInfo = [
+  {
+    image: search,
+    topic: "SEARCH",
+    text: `for vital company
+    information`,
+  },
+  {
+    image: connect,
+    topic: "CONNECT",
+    text: `with the resources to
+    meet your business needs`,
+  },
+  {
+    image: research,
+    topic: "SEARCH",
+    text: `and generate reports
+    that drive growth`,
+  },
+  {
+    image: academy,
+    topic: "ACADEMY",
+    text: `to give you the skills
+    for success in your career`,
+  },
+];
+
+export const detailsPageChat = [
+  {
+    message: "Hey, check out loreumipsum services.",
+    color: "--fs-search-surface-bg, #d1a2ce",
+  },
+  {
+    message: "I learned from their videos, got my first job.",
+    color: "--fs-search-surface-bg, #d1a2ce",
+  },
+  {
+    message: "You won't be disappointed with their services.",
+    color: "--fs-search-surface-bg, #d1a2ce",
+  },
+  {
+    message: "I got a perfect analysis report from them too",
+    color: "--fs-search-banner-blue, #DDF3FF",
+  },
+  {
+    message: "Oh, that's great.",
+    color: "--fs-search-banner-blue, #DDF3FF",
   },
 ];
