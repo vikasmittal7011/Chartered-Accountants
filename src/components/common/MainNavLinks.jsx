@@ -1,16 +1,16 @@
-import { Disclosure, Menu } from "@headlessui/react";
+import { Menu } from "@headlessui/react";
 import { classNames, navigation } from "../../utils/utils";
-import TransitionEffect from "../common/TransitionEffect";
+import TransitionEffect from "./TransitionEffect";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-const MobileMenuLinks = () => (
-  <Disclosure.Panel className="md:hidden">
-    <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+const MainNavLinks = () => (
+  <div className="hidden md:block">
+    <div className="ml-10 flex items-baseline space-x-4">
       {navigation.map((item, i) => (
         <Menu as="div" key={i}>
-          <Menu as="div" className="relative block text-left">
+          <Menu as="div" className="relative inline-block text-left">
             <div>
-              <Menu.Button className="inline-flex w-full justify-start items-center gap-x-1.5 rounded-md px-3 py-2 text-lg line font-medium">
+              <Menu.Button className="inline-flex w-full justify-center items-center gap-x-1.5 rounded-md px-3 py-2 text-lg line font-medium">
                 {item.name}
                 {item?.subNav && (
                   <ChevronDownIcon
@@ -20,8 +20,9 @@ const MobileMenuLinks = () => (
                 )}
               </Menu.Button>
             </div>
+
             <TransitionEffect>
-              <Menu.Items className="absolute left-24 z-10 mt-2 w-40 origin-top-right rounded-md bg-gray-200 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <Menu.Items className="absolute left-0 z-10 mt-2 w-40 origin-top-left rounded-md bg-gray-200 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 {item?.subNav?.map((item, i) => (
                   <Menu as="div" key={i}>
                     <div className="py-1">
@@ -44,18 +45,7 @@ const MobileMenuLinks = () => (
         </Menu>
       ))}
     </div>
-    <div className="border-t border-gray-700  pb-3 pt-4">
-      <div className="flex items-center px-5"></div>
-    </div>
-    <div className="flex gap-2 mx-3">
-      <button className="w-24 py-2 px-3 border-blue-500 border-2 rounded-lg font-bold text-blue-500">
-        Login
-      </button>
-      <button className="w-24 py-2 px-3 border-blue-500 border-2 rounded-lg font-bold text-white bg-blue-500">
-        Register
-      </button>
-    </div>
-  </Disclosure.Panel>
+  </div>
 );
 
-export default MobileMenuLinks;
+export default MainNavLinks;

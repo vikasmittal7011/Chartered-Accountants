@@ -1,9 +1,10 @@
 import { Disclosure } from "@headlessui/react";
-import MainNavLinks from "../home/MainNavLinks";
-import MenuButton from "../home/MenuButton";
-import AuthOptions from "../home/AuthOptions";
-import MobileMenuLinks from "../home/MobileMenuLinks";
+import MainNavLinks from "./MainNavLinks";
+import MenuButton from "./MenuButton";
+import AuthOptions from "./AuthOptions";
+import MobileMenuLinks from "./MobileMenuLinks";
 import { darklogo } from "../../assets";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -14,7 +15,9 @@ const Header = () => {
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <img className="h-11 w-36" src={darklogo} alt="logo" />
+                  <Link to="/">
+                    <img className="h-11 w-36" src={darklogo} alt="logo" />
+                  </Link>
                 </div>
                 <MainNavLinks />
               </div>
