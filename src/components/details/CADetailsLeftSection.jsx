@@ -42,9 +42,9 @@ const CADetailsLeftSection = ({ ca }) => {
 
         <p className="mt-10 gap-2 lg:text-xl xs:text-lg ">
           {ca.testimonial.text}
-          <p className="text-base text-gray-500 text-right">
+          <span className="text-base text-gray-500 text-right block">
             - {ca.testimonial.author}
-          </p>
+          </span>
         </p>
 
         <div className="mt-10 flex justify-center">
