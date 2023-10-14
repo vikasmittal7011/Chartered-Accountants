@@ -20,14 +20,22 @@ const Details = () => {
     show: false,
   });
   const [caDetails, setCaDetails] = useState();
+  const [otherCA, setOtherCA] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const loadCa = async () => {
     setLoading(true);
     const response = await apiCall();
     const searchedUser = response.record.filter((res) => res.name === caname);
+    const recommended = response.record.filter((res, i) => {
+      if (i < 4 && res.name !== caname) {
+        const randomNumber = Math.round(Math.random() * response.record.length);
+        return response.record[randomNumber];
+      }
+    });
     if (searchedUser.length > 0) {
       setCaDetails(searchedUser[0]);
+      setOtherCA(recommended);
     } else {
       setAlertData({
         type: "error",
@@ -63,7 +71,7 @@ const Details = () => {
       {!loading && caDetails && (
         <>
           <CADetails ca={caDetails} />
-          <RecomendedCA />
+          <RecomendedCA cas={otherCA} />
           <Footer />
         </>
       )}
