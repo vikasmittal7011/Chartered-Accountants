@@ -235,3 +235,31 @@ export const detailsPageChat = [
     color: "--fs-search-banner-blue, #DDF3FF",
   },
 ];
+
+export const footerLiks = [
+  {
+    title: "Company",
+    links: [{ name: "About" }, { name: "pricing" }, { name: "Careers" }],
+  },
+  {
+    title: "Solutions",
+    links: [
+      { name: "Search" },
+      { name: "Connect" },
+      { name: "Research" },
+      { name: "Academy" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [{ name: "Blogs" }, { name: "Forms" }],
+  },
+  {
+    title: "Support",
+    links: [{ name: "Help" }, { name: "Contact Us" }],
+  },
+  {
+    title: "Legal",
+    links: [{ name: "Privacy" }, { name: "Teams" }, { name: "Accessibility" }],
+  },
+];

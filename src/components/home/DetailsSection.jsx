@@ -32,7 +32,7 @@ const DetailsSection = () => {
             {detailsPageChat.map((chat, i) => (
               <div key={i} className="justify-end">
                 <p
-                  className="my-2 p-1 w-max rounded-lg rounded-es-none"
+                  className="my-2 xs:me-2 p-1 lg:w-max rounded-lg rounded-es-none"
                   style={{ background: `var(${chat.color})` }}
                 >
                   {chat.message}
