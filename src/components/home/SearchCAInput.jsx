@@ -24,7 +24,6 @@ const SearchCAInput = () => {
     if (searchAc) {
       const list = await loadCA();
       const ca = list.filter((ca) => ca.name === searchAc);
-      console.log(ca, list);
       if (ca.length > 0) {
         navigate(`/${ca[0].name}`);
       }

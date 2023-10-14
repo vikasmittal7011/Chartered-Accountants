@@ -35,10 +35,11 @@ const useFetchApiCall = () => {
       if (response.ok) {
         return data;
       } else {
+        alert("Something is wrong with api try again later");
         return false;
       }
     } catch (err) {
-      console.log(err.message);
+      alert(err.message);
     }
   };
 
