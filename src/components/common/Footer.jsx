@@ -45,7 +45,7 @@ const Footer = () => {
               Maharashtra
             </p>
           </div>
-          <div className="flex gap-2 cursor-pointer xs:mt-5">
+          <div className="flex gap-2 cursor-pointer xs:mt-5 lg:mt-0">
             <BiLogoWhatsapp size="20" />
             <BiLogoFacebookCircle size="20" />
             <BiLogoInstagramAlt size="20" />
@@ -54,10 +54,10 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* <div className="bg-black text-center text-white text-xs py-5">
+      <div className="bg-black text-center text-white text-xs py-5">
         Registered trademark of India Private Limited © 2023 loerumipsum Inc.
         All Rights Reserved
-      </div> */}
+      </div>
     </>
   );
 };

@@ -29,4 +29,8 @@
   );
 }
 
+.box-shahow {
+  box-shadow: 2px 4px 15px 0px rgba(133, 133, 167, 0.25);
+}
+
 @tailwind utilities;
